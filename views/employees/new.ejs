@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+<h2>Enter an New Employee</h2>
+<form action="/employees" method="POST">
+    <label>Name:
+        <input type="text" name="name">
+    </label><br>
+    <label>Employee ID:
+        <input type="text" name="employeeId">
+    </label><br>
+    <label>Department:
+        <select name="department">
+            <option value="shooter">Shooter</option>
+            <option value="transmedia">Transmedia</option>
+            <option value="publishing">Publishing</option>
+            <option value="franchise">Franchise</option>
+            <option value="analytics">Analytics</option>
+            <option value="IT">IT</option>
+            <option value="management">Management</option>
+            <option value="business operations">Business operations</option>
+            <option value="ecosystems">Ecosystems</option>
+            <option value="community">Community</option>
+            <option value="Esports">Esports</option>
+        </select>
+    </label><br>
+    <label>Required Software (separate different software with commas):
+        <input type="text" name="requiredSoftware">
+    </label><br>
+    <label>Full Time Employee:
+        <input type="checkbox" name="fullTimeEmployee" checked>
+    </label><br>
+    <input type="Submit" value="Add Employee">
+</form>
+
+<%- include('../partials/footer') %>
