@@ -4,11 +4,22 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
-    name: String,
-    employeeId: Number,
+    name: {
+        type: String,
+        required: true
+    },
+    employeeId: {
+        type: Number,
+        required: true
+    },
     department: String,
     requiredSoftware: [String],
-    fullTimeEmployee: Boolean,
+    fullTimeEmployee: {
+        type: Boolean,
+        default: false
+    }
+}, {
+    timestamps: true
 });
 
 

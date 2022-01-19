@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h2>Employee list</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Department</th>
+			<th>Required Software</th>
+            <th>Full Time Employee</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- Write the line of EJS to iterate over flights using forEach -->
+		<% employees.forEach(function(e) { %>
+		<tr>
+			<td><%= e.name %></td>
+			<td><%= e.employeeId %></td>
+			<td><%= e.department %></td>
+			<td><%= e.requiredSoftware.join(', ')%></td>
+            <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
+			<% }); %>
+	</tbody>
+</table>
+
+<%- include('../partials/footer') %>
