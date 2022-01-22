@@ -10,6 +10,7 @@ const employeeSchema = new Schema({
     },
     department: String,
     approvedSoftware: [String],
+    purchased: Date,
     fullTimeEmployee: {
         type: Boolean,
         default: false

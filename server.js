@@ -13,6 +13,7 @@ require('./config/database');
 //config passport
 require('./config/passport');
 
+const isLoggedIn = require('./config/auth');
 
 var indexRouter = require('./routes/index');
 var employeesRouter = require('./routes/employees');

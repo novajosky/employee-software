@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<h2>Enter New Software</h2>
+<form action="/employees" method="POST">
+    <label>Approved Software:
+        <input type="text" name="approvedSoftware">
+        <input type="datetime-local" name="purchased">
+    </label><br>
+    <label>Full Time Employee:
+        <input type="checkbox" name="fullTimeEmployee" checked>
+    </label><br>
+    <input type="Submit" value="Add Employee">
+</form>
+
+
+<%- include('../partials/footer') %>

@@ -14,10 +14,10 @@ function index(req, res) {
 }
 
 function create(req, res) {
+    console.log(req.body)
     //convert FTE checkbox of undefined to a boolean
     req.body.fullTimeEmployee = !!req.body.fullTimeEmployee;
     //remove leading and trailing spaces
-    req.body.approvedSoftware = req.body.arrovedSoftware.trim();
     if (req.body.approvedSoftware) req.body.approvedSoftware = req.body.approvedSoftware.split(/\s*,\s*/);
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];

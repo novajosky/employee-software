@@ -7,6 +7,7 @@
 			<th>Name</th>
 			<th>Department</th>
 			<th>Approved Software</th>
+			<th>Purchased</th>
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
@@ -16,7 +17,8 @@
 		<tr>
 			<td><%= e.name %></td>
 			<td><%= e.department %></td>
-			<td><%= e.approvedSoftware.join(', ')%></td>
+			<td><%= e.approvedSoftware%></td>
+			<td><%= e.purchased %></td>
             <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
 			<% }); %>
 	</tbody>
