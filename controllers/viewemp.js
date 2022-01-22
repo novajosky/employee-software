@@ -1,6 +1,5 @@
-const Software = require('../models/software');
+const Software = require('../models/viewemp');
 const Employee = require('../models/employee');
-const employee = require('../models/employee');
 
 module.exports = {
     new: newSoftware,
@@ -21,7 +20,7 @@ function create(req, res) {
     const s = req.body.purchased;
     req.body.purchased = `${s.substr(5, 2)}-${s.substr(8, 2)}-${s.substr(0, 4)}`;
     Software.create(req.body, function(err, software) {
-        res.redirect('/softwares/new');
+        res.redirect('/viewemp/show');
     });
 }
 
@@ -29,7 +28,7 @@ function newSoftware(req, res) {
     Software.find({})
     .sort('name')
     .exec(function (err, software) {
-        res.render('softwares/new', {
+        res.render('viewemp/show', {
             employee: 'Add Software',
             software
         });

@@ -17,6 +17,7 @@ const isLoggedIn = require('./config/auth');
 
 var indexRouter = require('./routes/index');
 var employeesRouter = require('./routes/employees');
+var viewempRouter = require('./routes/viewemp');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/employees', employeesRouter);
+app.use('/viewemp', viewempRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

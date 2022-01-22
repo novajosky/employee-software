@@ -8,4 +8,4 @@ const softwareSchema = new Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('Software', softwareSchema);
+module.exports = mongoose.model('Viewemp', softwareSchema);
