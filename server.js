@@ -17,7 +17,7 @@ const isLoggedIn = require('./config/auth');
 
 var indexRouter = require('./routes/index');
 var employeesRouter = require('./routes/employees');
-var viewempRouter = require('./routes/viewemp');
+var viewempRouter = require('./routes/viewemps');
 
 var app = express();
 

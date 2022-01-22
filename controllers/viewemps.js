@@ -20,7 +20,7 @@ function create(req, res) {
     const s = req.body.purchased;
     req.body.purchased = `${s.substr(5, 2)}-${s.substr(8, 2)}-${s.substr(0, 4)}`;
     Software.create(req.body, function(err, software) {
-        res.redirect('/viewemp/show');
+        res.redirect('/viewemps/show');
     });
 }
 
@@ -28,7 +28,7 @@ function newSoftware(req, res) {
     Software.find({})
     .sort('name')
     .exec(function (err, software) {
-        res.render('viewemp/show', {
+        res.render('viewemps/show', {
             employee: 'Add Software',
             software
         });

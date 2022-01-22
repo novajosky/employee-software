@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<div>Search Employee: </div>
+<form>
+    <input type="text" action="/employees/:id" method="GET"><br>
+    <input type="submit" value="Search"><br>
+</form>
+
+<div>Enter new software with purchase date:</div>
+<form id="add-software-form" action="/viewemps" method="POST">
+    <input type="text" name="approvedSoftware">
+    <input type="datetime-local" name="purchased">
+    </label><br>
+    <input type="Submit" value="Add Software">
+</form>
+
+
+<%- include('../partials/footer') %>
