@@ -5,9 +5,8 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>ID</th>
 			<th>Department</th>
-			<th>Required Software</th>
+			<th>Approved Software</th>
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
@@ -16,9 +15,8 @@
 		<% employees.forEach(function(e) { %>
 		<tr>
 			<td><%= e.name %></td>
-			<td><%= e.employeeId %></td>
 			<td><%= e.department %></td>
-			<td><%= e.requiredSoftware.join(', ')%></td>
+			<td><%= e.approvedSoftware.join(', ')%></td>
             <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
 			<% }); %>
 	</tbody>

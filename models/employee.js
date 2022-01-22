@@ -8,12 +8,8 @@ const employeeSchema = new Schema({
         type: String,
         required: true
     },
-    employeeId: {
-        type: Number,
-        required: true
-    },
     department: String,
-    requiredSoftware: [String],
+    approvedSoftware: [String],
     fullTimeEmployee: {
         type: Boolean,
         default: false

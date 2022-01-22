@@ -1,4 +1,3 @@
-const employee = require("../models/employee");
 const router = require("../routes");
 const Employee = require('../models/employee');
 
@@ -18,8 +17,8 @@ function create(req, res) {
     //convert FTE checkbox of undefined to a boolean
     req.body.fullTimeEmployee = !!req.body.fullTimeEmployee;
     //remove leading and trailing spaces
-    req.body.requiredSoftware = req.body.requiredSoftware.trim();
-    if (req.body.requiredSoftware) req.body.requiredSoftware = req.body.requiredSoftware.split(/\s*,\s*/);
+    req.body.approvedSoftware = req.body.arrovedSoftware.trim();
+    if (req.body.approvedSoftware) req.body.approvedSoftware = req.body.approvedSoftware.split(/\s*,\s*/);
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }

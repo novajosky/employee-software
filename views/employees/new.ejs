@@ -1,12 +1,9 @@
 <%- include('../partials/header') %>
 
-<h2>Enter an New Employee</h2>
+<h2>Enter a New Employee</h2>
 <form action="/employees" method="POST">
     <label>Name:
         <input type="text" name="name">
-    </label><br>
-    <label>Employee ID:
-        <input type="text" name="employeeId">
     </label><br>
     <label>Department:
         <select name="department">
@@ -23,8 +20,8 @@
             <option value="Esports">Esports</option>
         </select>
     </label><br>
-    <label>Required Software (separate different software with commas):
-        <input type="text" name="requiredSoftware">
+    <label>Approved Software (separate different software with commas):
+        <input type="text" name="approvedSoftware">
     </label><br>
     <label>Full Time Employee:
         <input type="checkbox" name="fullTimeEmployee" checked>
