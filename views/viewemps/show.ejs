@@ -1,10 +1,31 @@
 <%- include('../partials/header') %>
 
-<div>Search Employee: </div>
-<form>
-    <input type="text" action="/employees/:id" method="GET"><br>
-    <input type="submit" value="Search"><br>
-</form>
+<h2>Search employee</h2>
+<table>
+	<div class="row">
+		<form action="/employees/:id" method="GET">
+		<div class="input-group">
+			<input type="text" name="username" class="form-control"
+			placeholder="Enter an employee">
+			<span class="input-group-btn">
+			<button class="btn btn-success" type="submit">Search</button>
+			</span>
+		</div>
+		</form>
+	  </div>	 
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Department</th>
+			<th>Approved Software</th>
+			<th>Purchased</th>
+            <th>Full Time Employee</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	</tbody>
+</table><br>
 
 <div>Enter new software with purchase date:</div>
 <form id="add-software-form" action="/viewemps" method="POST">

@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+    <thead>
+      <tr>
+        <th>Software name:</th>
+        <th>Suggestion:</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% inquiries.forEach(function(i) { %>
+        <tr>
+          <td><%= i.software name %></td>
+          <td><%= i.suggestion %></td>
+          <td><a href="/inquiries/<%= i._id %>">DETAILS</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+<form id="add-inquiry-form" action="/inquiries" method="POST">
+  <label>Software name:</label>
+  <input type="text" name="software name">
+  <label>Suggestion:</label>
+  <input type="text" name="suggestion">
+  <input type="submit" value="Add suggestion">
+</form>
+
+<%- include('../partials/footer') %>
