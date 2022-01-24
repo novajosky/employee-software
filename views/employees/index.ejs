@@ -20,6 +20,11 @@
 			<td><%= e.approvedSoftware%></td>
 			<td><%= e.purchased %></td>
             <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
+		<% if (user) { %>
+			<td><a href="/employees/<%= e._id %>">DETAILS</a></td>
+		<% } else { %>
+			<td><br></td>
+			<% } %>
 			<% }); %>
 		</tr>
 	</tbody>

@@ -2,17 +2,6 @@
 
 <h2>Search employee</h2>
 <table>
-	<div class="row">
-		<form action="/employees/:id" method="GET">
-		<div class="input-group">
-			<input type="text" name="username" class="form-control"
-			placeholder="Enter an employee">
-			<span class="input-group-btn">
-			<button class="btn btn-success" type="submit">Search</button>
-			</span>
-		</div>
-		</form>
-	  </div>	 
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -22,13 +11,11 @@
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
-	<tbody>
 
-	</tbody>
-</table><br>
+</table>
 
 <div>Enter new software with purchase date:</div>
-<form id="add-software-form" action="/viewemps" method="POST">
+<form id="add-software-form" action="/employees" method="POST">
     <input type="text" name="approvedSoftware">
     <input type="datetime-local" name="purchased">
     </label><br>

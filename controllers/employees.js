@@ -4,12 +4,19 @@ const Employee = require('../models/employee');
 module.exports = {
     new: newEmployee,
     create,
-    index
+    index,
+    show
 };
 
 function index(req, res) {
     Employee.find({}, function(err, employees) {
         res.render('employees/index', { employees });
+    });
+}
+
+function show(req, res) {
+    Employee.findById(req.params.id, function(err, employee) {
+        res.render('employees/show', {employee});
     });
 }
 

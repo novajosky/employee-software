@@ -2,11 +2,11 @@
 
 <table id="list">
     <thead>
-      <tr>
-        <th>Software name:</th>
-        <th>Suggestion:</th>
-        <th></th>
-      </tr>
+        <tr>
+            <th>Software name</th>
+            <th>Suggestion</th>
+            <th></th>
+        </tr>
     </thead>
 	<tbody>
 		<!-- Write the line of EJS to iterate over employees using forEach -->
@@ -20,11 +20,11 @@
 </table><br>
 
 <form id="add-inquiry-form" action="/inquiries" method="POST">
-  <label>Software name:</label>
-  <input type="text" name="name">
-  <label>Suggestion:</label>
-  <input type="text" name="data">
-  <input type="submit" value="Add suggestion">
+    <label>Software name:</label>
+    <input type="text" name="name">
+    <label>Suggestion:</label>
+    <input type="text" name="data">
+    <input type="submit" value="Add suggestion">
 </form>
 
 <%- include('../partials/footer') %>

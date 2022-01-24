@@ -11,5 +11,7 @@ router.get('/', employeesCtrl.index);
 router.get('/new', isLoggedIn, employeesCtrl.new);
 //POST /employees
 router.post('/', isLoggedIn, employeesCtrl.create);
+//GET /employees/:id employee details
+router.get('/:id', employeesCtrl.show)
 
 module.exports = router;
