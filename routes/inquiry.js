@@ -6,11 +6,11 @@ var isLoggedIn = require('../config/auth');
 // This router is mounted to a "starts with" path of '/'
 
 //GET /inquiries (display all inquiries)
-router.get('/inquiries/index', inquiriesCtrl.index)
+router.get('/index', inquiriesCtrl.index)
 // GET /inquiries
-router.get('/index',  inquiriesCtrl.new);
+// router.get('/index',  inquiriesCtrl.new);
 // POST /inquiries
-router.post('/inquiries', inquiriesCtrl.create);
+router.post('/', isLoggedIn, inquiriesCtrl.create);
 
 
 module.exports = router;

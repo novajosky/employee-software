@@ -8,22 +8,22 @@
         <th></th>
       </tr>
     </thead>
-    <tbody>
-      <% inquiries.forEach(function(i) { %>
-        <tr>
-          <td><%= i.software name %></td>
-          <td><%= i.suggestion %></td>
-          <td><a href="/inquiries/<%= i._id %>">DETAILS</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-    </table>
+	<tbody>
+		<!-- Write the line of EJS to iterate over employees using forEach -->
+		<% inquiries.forEach(function(i) { %>
+		<tr>
+			<td><%= i.name %></td>
+			<td><%= i.data %></td>
+			<% }); %>
+		</tr>
+	</tbody>
+</table><br>
 
 <form id="add-inquiry-form" action="/inquiries" method="POST">
   <label>Software name:</label>
-  <input type="text" name="software name">
+  <input type="text" name="name">
   <label>Suggestion:</label>
-  <input type="text" name="suggestion">
+  <input type="text" name="data">
   <input type="submit" value="Add suggestion">
 </form>
 
