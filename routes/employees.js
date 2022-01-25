@@ -13,5 +13,7 @@ router.get('/new', isLoggedIn, employeesCtrl.new);
 router.post('/', isLoggedIn, employeesCtrl.create);
 //GET /employees/:id employee details
 router.get('/:id', employeesCtrl.show)
+//POST/employees/:id/ add software
+router.post('/employees/:id', employeesCtrl.create)
 
 module.exports = router;

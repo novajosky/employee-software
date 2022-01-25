@@ -7,8 +7,6 @@ var isLoggedIn = require('../config/auth');
 
 //GET /inquiries (display all inquiries)
 router.get('/index', inquiriesCtrl.index)
-// GET /inquiries
-// router.get('/index',  inquiriesCtrl.new);
 // POST /inquiries
 router.post('/', isLoggedIn, inquiriesCtrl.create);
 

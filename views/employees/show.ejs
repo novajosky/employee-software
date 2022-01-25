@@ -16,15 +16,16 @@
 		<tr>
 			<td><%= employee.name %></td>
 			<td><%= employee.department %></td>
-			<% employee.approvedSoftware.forEach(function(e) { %>
-				<td><%= e%></td>
+			<td><% employee.approvedSoftware.forEach(function(e) { %>
+				<%= e%>
 			<%}); %>
+			</td>
 			<td><%= employee.purchased.toLocaleDateString() %></td>
             <td><%= employee.fullTimeEmployee ? 'Yes' : 'No' %></td>
 			
 		</tr>
 	</tbody>	
-</table>
+</table><br>
 
 <div>Enter new software with purchase date:</div>
 <form id="add-software-form" action="/employees" method="POST">
