@@ -1,10 +1,18 @@
+
 body {
+  margin: 0;
+  height: 100vh;
   padding: 50px;
   font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: bisque;
   background-image: url("https://wallpapercave.com/wp/wp4302953.png");
   background-size: 100%;
   color: #00B7FF;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
 }
 
 table {
@@ -46,4 +54,6 @@ nav, .login {
 form {
   background-color: rgba(0, 113, 128, 0.2);
   align-items: center;
+
 }
+

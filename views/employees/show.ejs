@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Search employee</h2>
+<h2>View employee</h2>
 <table>
 	<thead>
 		<tr>
@@ -11,7 +11,19 @@
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
-	
+	<tbody>
+		
+		<tr>
+			<td><%= employee.name %></td>
+			<td><%= employee.department %></td>
+			<% employee.approvedSoftware.forEach(function(e) { %>
+				<td><%= e%></td>
+			<%}); %>
+			<td><%= employee.purchased.toLocaleDateString() %></td>
+            <td><%= employee.fullTimeEmployee ? 'Yes' : 'No' %></td>
+			
+		</tr>
+	</tbody>	
 </table>
 
 <div>Enter new software with purchase date:</div>
