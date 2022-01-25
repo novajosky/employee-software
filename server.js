@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require("method-override");
 
 //load "secrets" in the .env file
 require('dotenv').config();
@@ -37,6 +38,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {

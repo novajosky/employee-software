@@ -5,7 +5,8 @@ module.exports = {
     new: newEmployee,
     create,
     index,
-    show
+    show,
+    delete: deleteEmployee,
 };
 
 function index(req, res) {
@@ -18,6 +19,14 @@ function show(req, res) {
     Employee.findById(req.params.id, function(err, employee) {
         res.render('employees/show', {employee});
     });
+}
+
+function deleteEmployee(req, res) {
+    Employee.findOneAndDelete(
+        { _id: req.params.id }, function (err) {
+            res.redirect('/employees');
+        }
+    );
 }
 
 function create(req, res) {

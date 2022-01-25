@@ -22,7 +22,12 @@
 			</td>
 			<td><%= employee.purchased.toLocaleDateString() %></td>
             <td><%= employee.fullTimeEmployee ? 'Yes' : 'No' %></td>
-			
+			<td>
+				<form action="/employees/<%= employee.id %>?_method=DELETE" method="POST"
+					class="delete-form">
+					<button type="submit">Delete Employee</button>
+				</form>
+			</td>			
 		</tr>
 	</tbody>	
 </table><br>

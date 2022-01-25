@@ -15,5 +15,7 @@ router.post('/', isLoggedIn, employeesCtrl.create);
 router.get('/:id', employeesCtrl.show)
 //POST/employees/:id/ add software
 router.post('/employees/:id', employeesCtrl.create)
+//DELETE /employees/:id
+router.delete("/:id", employeesCtrl.delete);
 
 module.exports = router;
