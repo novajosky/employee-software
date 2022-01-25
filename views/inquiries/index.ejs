@@ -12,7 +12,7 @@
 		<!-- Write the line of EJS to iterate over employees using forEach -->
 		<% inquiries.forEach(function(i) { %>
 		<tr>
-			<td><%= i.name %></td>
+			<td><%= i.approvedSoftware %></td>
 			<td><%= i.data %></td>
 			<% }); %>
 		</tr>
@@ -21,7 +21,7 @@
 
 <form id="add-inquiry-form" action="/inquiries" method="POST">
     <label>Software name:</label>
-    <input type="text" name="name">
+    <input type="text" name="approvedSoftware">
     <label>Suggestion:</label>
     <input type="text" name="data">
     <input type="submit" value="Add suggestion">

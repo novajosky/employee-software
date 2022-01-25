@@ -1,11 +1,28 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: bisque;
+  background-image: url("https://wallpapercave.com/wp/wp4302953.png");
+  background-size: 100%;
+  color: #00B7FF;
+}
+
+table {
+  background-color: rgba(0, 113, 128, 0.2);
+  justify-items: center;
+  text-align: center;
+}
+
+td :hover {
+  color: tomato;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav :hover {
+  color: tomato;
 }
 
 nav, .login {
@@ -13,9 +30,20 @@ nav, .login {
   justify-content: center;
   align-items: center;
   height: 30px;
-  background-color: rgb(43, 255, 0);
+  background-color: rgba(0, 113, 128, 0.2);
+}
+
+.login {
+  background-color: rgba(0, 150, 0, 0);
 }
 
 .login img {
   height: 30px;
+  color:rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .5);
+}
+
+form {
+  background-color: rgba(0, 113, 128, 0.2);
+  align-items: center;
 }
