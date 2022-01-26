@@ -1,5 +1,6 @@
 const router = require("../routes");
 const Employee = require('../models/employee');
+const Software = require('../models/software');
 
 module.exports = {
     new: newEmployee,
@@ -16,9 +17,16 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Employee.findById(req.params.id, function(err, employee) {
-        res.render('employees/show', {employee});
-    });
+    Employee.findById(req.params.id)
+    .populate('approvedSoftware')
+    .exec(function (err, employee) {
+        Software.find(
+            { _id: { $nin: employee.approvedSoftware } },
+            function (err, softwares) {
+                res.render('employees/show', { title: 'Employee Detail', employee, softwares });
+            }
+        )
+    })
 }
 
 function deleteEmployee(req, res) {

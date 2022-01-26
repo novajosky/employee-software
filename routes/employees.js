@@ -12,10 +12,10 @@ router.get('/new', isLoggedIn, employeesCtrl.new);
 //POST /employees
 router.post('/', isLoggedIn, employeesCtrl.create);
 //GET /employees/:id employee details
-router.get('/:id', employeesCtrl.show)
+router.get('/:id', employeesCtrl.show);
 //POST/employees/:id/ add software
-router.post('/employees/:id', employeesCtrl.create)
+router.post('/employees/:id', employeesCtrl.create);
 //DELETE /employees/:id
-router.delete("/:id", employeesCtrl.delete);
+router.delete("/:id", isLoggedIn, employeesCtrl.delete);
 
 module.exports = router;

@@ -7,7 +7,7 @@
 			<th>Name</th>
 			<th>Department</th>
 			<th>Approved Software</th>
-			<th>Purchased</th>
+			<th>Start</th>
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
@@ -16,11 +16,14 @@
 		<tr>
 			<td><%= employee.name %></td>
 			<td><%= employee.department %></td>
-			<td><% employee.approvedSoftware.forEach(function(e) { %>
-				<%= e%>
-			<%}); %>
+			<td>
+				<ul>
+				<%- employee.approvedSoftware.map(s =>
+				`<li>${s.approvedSoftware} <smalll>${s.timestamp.toLocaleDateString()}</smalll></li>`
+				).join('') %>
+				</ul>
 			</td>
-			<td><%= employee.purchased.toLocaleDateString() %></td>
+			<td><%= employee.purchased %></td>
             <td><%= employee.fullTimeEmployee ? 'Yes' : 'No' %></td>
 			<td>
 				<form action="/employees/<%= employee.id %>?_method=DELETE" method="POST"
@@ -32,13 +35,15 @@
 	</tbody>	
 </table><br>
 
-<div>Enter new software with purchase date:</div>
-<form id="add-software-form" action="/employees" method="POST">
-    <input type="text" name="approvedSoftware">
-    <input type="datetime-local" name="purchased">
-    </label><br>
-    <input type="Submit" value="Add Software">
-</form>
+<div>Select approved software for employee:</div>
 
+<form id="add-software-form" action="/employees/<%= employee._id %>/softwares" method="POST">
+	<select name="softwareId">
+	  <%- softwares.map(s => 
+		`<option value="${s._id}">${s.approvedSoftware}</option>`
+	  ).join('') %>
+	</select>
+	<button type="submit">Add Approved Software</button>
+  </form>
 
 <%- include('../partials/footer') %>

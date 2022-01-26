@@ -1,16 +1,19 @@
 const mongoose = require('mongoose');
 
-// shortcut variable
 const Schema = mongoose.Schema;
 
+// shortcut variable
 const employeeSchema = new Schema({
     name: {
         type: String,
         required: true
     },
     department: String,
-    approvedSoftware: [String],
-    purchased: Date,
+    approvedSoftware: [{
+        type: Schema.Types.ObjectId,
+        ref: "Software"
+    }],
+    startDate: Date,
     fullTimeEmployee: {
         type: Boolean,
         default: false
