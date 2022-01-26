@@ -7,7 +7,7 @@
 			<th>Name</th>
 			<th>Department</th>
 			<th>Approved Software</th>
-			<th>Start</th>
+			<th>Start Date</th>
             <th>Full Time Employee</th>
 		</tr>
 	</thead>
@@ -23,7 +23,7 @@
 				).join('') %>
 				</ul>
 			</td>
-			<td><%= employee.purchased %></td>
+			<td><%= employee.startDate %></td>
             <td><%= employee.fullTimeEmployee ? 'Yes' : 'No' %></td>
 			<td>
 				<form action="/employees/<%= employee.id %>?_method=DELETE" method="POST"
@@ -44,6 +44,6 @@
 	  ).join('') %>
 	</select>
 	<button type="submit">Add Approved Software</button>
-  </form>
+</form>
 
 <%- include('../partials/footer') %>

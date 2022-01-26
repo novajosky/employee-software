@@ -48,7 +48,8 @@ function create(req, res) {
     const employee = new Employee(req.body);
     employee.save(function(err) {
         if (err) return res.render('employees/new');
-        res.redirect('/employees');
+        console.log(employee);
+        res.redirect(`/employees/${employee._id}`);
     });
 }
 

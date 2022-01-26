@@ -14,7 +14,7 @@ router.post('/', isLoggedIn, employeesCtrl.create);
 //GET /employees/:id employee details
 router.get('/:id', employeesCtrl.show);
 //POST/employees/:id/ add software
-router.post('/employees/:id', employeesCtrl.create);
+router.post('/employees/:id', isLoggedIn, employeesCtrl.create);
 //DELETE /employees/:id
 router.delete("/:id", isLoggedIn, employeesCtrl.delete);
 
