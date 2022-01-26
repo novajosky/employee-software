@@ -3,10 +3,8 @@ const Schema = mongoose.Schema;
 
 const softwareSchema = new Schema({
   approvedSoftware: {
-      type: [String], 
-      required: true, 
-      unique: true
-  }},
+    type: String, required: true, unique: true},
+},
 {
   timestamps: true
 });
