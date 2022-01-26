@@ -2,7 +2,7 @@
 
 <section id="badge-container">
   <% softwares.forEach(function(s) { %>
-  <form action="/softwares/<%= s.approvedSoftware %>?_method=DELETE" 
+  <form action="/softwares/<%= s.id %>?_method=DELETE" 
     method="POST" class="delete-form">
   <article class="badge"><%= s.approvedSoftware %></article>
   <button type="submit">Delete</button>

@@ -13,6 +13,9 @@ module.exports = {
 
 function index(req, res) {
     Employee.find({}, function(err, employees) {
+        // grab(map? reduce? in js) all the software id's that are returned for each employee
+        // and query the softwares table for all of those software id's associated to each employee
+        // pass that info into the view
         res.render('employees/index', { employees });
     });
 }

@@ -13,7 +13,6 @@ module.exports = {
 
 function index(req, res) {
   Software.find({}, function(err, softwares) {
-    console.log(softwares);
       res.render('softwares/new', { softwares });
   });
 }
@@ -21,7 +20,7 @@ function index(req, res) {
 function deleteSoftware(req, res) {
   Software.findOneAndDelete(
       { _id: req.params.id }, function (err) {
-          res.redirect('/softwares');
+          res.redirect('/softwares/new');
       }
   );
 }
