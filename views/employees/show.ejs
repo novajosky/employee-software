@@ -19,7 +19,7 @@
 			<td>
 				<ul>
 				<%- employee.approvedSoftware.map(s =>
-				`<li>${s.approvedSoftware} <smalll>${s.timestamp.toLocaleDateString()}</smalll></li>`
+				`<li>${s.approvedSoftware} <smalll>${s.createdAt.toLocaleDateString()}</smalll></li>`
 				).join('') %>
 				</ul>
 			</td>

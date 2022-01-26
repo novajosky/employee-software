@@ -8,6 +8,7 @@ module.exports = {
     index,
     show,
     delete: deleteEmployee,
+    addToApprovedSoftware,
 };
 
 function index(req, res) {
@@ -52,6 +53,15 @@ function create(req, res) {
         res.redirect(`/employees/${employee._id}`);
     });
 }
+
+function addToApprovedSoftware(req, res) {
+    Employee.findById(req.params.id, function(err, employee) {
+      employee.approvedSoftware.push(req.body.softwareId);
+      employee.save(function(err) {
+        res.redirect(`/employees/${employee._id}`);
+      });
+    });
+  }
 
 function newEmployee(req, res) {
     res.render('employees/new');
