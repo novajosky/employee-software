@@ -30,7 +30,6 @@ function deleteEmployee(req, res) {
 }
 
 function create(req, res) {
-    console.log(req.body)
     //convert FTE checkbox of undefined to a boolean
     req.body.fullTimeEmployee = !!req.body.fullTimeEmployee;
     //remove leading and trailing spaces
@@ -41,7 +40,6 @@ function create(req, res) {
     const employee = new Employee(req.body);
     employee.save(function(err) {
         if (err) return res.render('employees/new');
-        console.log(employee);
         res.redirect('/employees');
     });
 }

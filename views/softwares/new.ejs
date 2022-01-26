@@ -1,17 +1,15 @@
 <%- include('../partials/header') %>
 
-<div>Please select from approved software</div>
 <section id="badge-container">
-  <% softwares.forEach(function(s) { %>
-    <article class="badge"><%= s.approvedSoftware %></article>
-  <% }) %>
-</section>
+  <div>Please add new approved software to the list</div>
+<% softwares.forEach(function(s) { %>
+  <article class="badge"><%= s.approvedSoftware %></article>
+<% }) %>
+</section><br>
 
 <form id="add-software-form" action="/softwares" method="POST">
   <label>Software:</label>
   <input type="text" name="approvedSoftware">
-  <label>Purchased:</label>
-  <input type="date" name="purchased">
   <input type="submit" value="Add Software">
 </form>
 

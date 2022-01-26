@@ -3,12 +3,11 @@ const Schema = mongoose.Schema;
 
 const softwareSchema = new Schema({
   approvedSoftware: {
-      type: String, 
+      type: [String], 
       required: true, 
       unique: true
-  },
-  purchased: Date
-}, {
+  }},
+{
   timestamps: true
 });
 
