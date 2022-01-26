@@ -17,7 +17,9 @@
 		<tr>
 			<td><%= e.name %></td>
 			<td><%= e.department %></td>
-			<td><%= e.approvedSoftware%></td>
+			<td><%- e.approvedSoftware.map(s =>
+				`<li>${s.approvedSoftware}</li>`
+				).join('') %></td>
 			<td><%= e.startDate %></td>
             <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
 		<% if (user) { %>
