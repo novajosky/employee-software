@@ -18,9 +18,9 @@
 			<td><%= e.department %></td>
 			<td><%= e.startDate.toLocaleDateString() %></td>
             <td><%= e.fullTimeEmployee ? 'Yes' : 'No' %></td>
-		<% if (user) { %>
+			<% if (user) { %>
 			<td><a href="/employees/<%= e._id %>">DETAILS</a></td>
-		<% } else { %>
+			<% } else { %>
 			<td><br></td>
 			<% } %>
 			<% }); %>

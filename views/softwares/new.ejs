@@ -1,20 +1,31 @@
 <%- include('../partials/header') %>
 
-<section id="badge-container">
-  <% softwares.forEach(function(s) { %>
-  <form action="/softwares/<%= s.id %>?_method=DELETE" 
-    method="POST" class="delete-form">
-  <article class="badge"><%= s.approvedSoftware %></article>
-  <button type="submit">Delete</button>
-  <% }) %>
-</form>  
-
-</section>
+<h3>Add a new approved software</h3>
 
 <form id="add-software-form" action="/softwares" method="POST">
   <label>Software:</label>
   <input type="text" name="approvedSoftware">
   <input type="submit" value="Add Software">
 </form>
+
+<h4>Select a software below needed to be removed</h4>
+
+
+<div class="flex">
+  <section id="badge-container">
+    <div>
+      <% softwares.forEach(function(s) { %>
+    </div>
+  <div>
+    <form action="/softwares/<%= s.id %>?_method=DELETE" 
+      method="POST" class="delete-form">
+      <article class="badge"><%= s.approvedSoftware %></article>
+    <button type="submit">X</button>
+    <% }) %>
+    </form>  
+  </div>
+  </section>
+</div>
+
 
 <%- include('../partials/footer') %>
