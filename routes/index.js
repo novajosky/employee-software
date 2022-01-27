@@ -11,7 +11,7 @@ router.get('/auth/google', passport.authenticate(
   {
     scope: ['profile', 'email'],
     //optionally for pick account every time
-    //prompt: 'select_account'
+    prompt: 'select_account'
   }
 ));
 

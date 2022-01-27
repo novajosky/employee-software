@@ -10,7 +10,7 @@ router.get('/', employeesCtrl.index);
 // GET /employees/new
 router.get('/new', isLoggedIn, employeesCtrl.new);
 //POST /employees
-router.post('/', isLoggedIn, employeesCtrl.create);
+router.post('/', employeesCtrl.create);
 //GET /employees/:id employee details
 router.get('/:id', employeesCtrl.show);
 //POST/employees/:id/ add software
