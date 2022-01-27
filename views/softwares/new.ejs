@@ -8,8 +8,7 @@
   <input type="submit" value="Add Software">
 </form>
 
-<h4>Select a software below needed to be removed</h4>
-
+<h4>Click on a software below needed to be removed</h4>
 
 <div class="flex">
   <section id="badge-container">
@@ -19,13 +18,11 @@
   <div>
     <form action="/softwares/<%= s.id %>?_method=DELETE" 
       method="POST" class="delete-form">
-      <article class="badge"><%= s.approvedSoftware %></article>
-    <button type="submit">X</button>
+    <button type="submit" class="badge"><%= s.approvedSoftware %></button>
     <% }) %>
     </form>  
   </div>
   </section>
 </div>
-
 
 <%- include('../partials/footer') %>
