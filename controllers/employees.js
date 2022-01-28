@@ -39,9 +39,7 @@ function deleteEmployee(req, res) {
 }
 
 function create(req, res) {
-    //convert FTE checkbox of undefined to a boolean
     req.body.fullTimeEmployee = !!req.body.fullTimeEmployee;
-    //remove leading and trailing spaces
     if (req.body.approvedSoftware) req.body.approvedSoftware = req.body.approvedSoftware.split(/\s*,\s*/);
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
