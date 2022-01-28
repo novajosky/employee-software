@@ -6,12 +6,12 @@
 <p>For many companies that produce software, using only approved software is paramount. Use of any unapproved software in production can lead to serious legal issues which can put any company at risk.</p>
 <h4>Directions</h4>
 <p>Please log in to utilize the app! You can create an employee and add software that is approved for their use. Software can be added and removed on a separate page that can designated and removed from the employee database.</p>
+<p>Comments can also be added to an employee details page for reminders.</p>
 <h4>Technologies Used:</h4>
 <ul>
     <li>Node</li>
     <li>Express</li>
     <li>MongoDB</li>
-    <li>Method Override</li>
     <li>HTML</li>
     <li>CSS</li>
     <li>Javascript</li>
