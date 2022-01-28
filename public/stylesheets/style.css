@@ -9,14 +9,16 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("https://wallpapercave.com/wp/wp4302953.png");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 table {
-  background-color: rgba(0, 113, 128, 0.2);
   justify-items: center;
+  border: 1px solid rgb(3, 65, 122);
   text-align: center;
-  width: 90%;
+  width: 95%;
+  border-collapse: collapse;
 }
 
 nav :hover, td :hover {
@@ -55,7 +57,7 @@ input {
   flex-wrap: wrap;
   padding: 1rem;
   width: 90%;
-  border: 2px solid rgb(3, 65, 122);
+  border: 1px solid rgb(3, 65, 122);
   border-radius: .5rem;
   margin: .5rem 0 2rem;
 }
@@ -88,3 +90,11 @@ button, input, select {
 input:hover {
   color: tomato;
 }
+
+p {
+  text-align: center;
+  border: 1px solid rgb(3, 65, 122);
+  border-radius: .5rem;
+  margin: .5rem 0 2rem;
+}
+
