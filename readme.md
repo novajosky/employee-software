@@ -5,9 +5,9 @@
 <p>Employee-Software was designed for business administrators and the employees they are supporting to help track software approved for use.</p>
 <p>For many companies that produce software, using only approved software is paramount. Use of any unapproved software in production can lead to serious legal issues which can put any company at risk.</p>
 <h4>Directions</h4>
-<img src="https://imgur.com/N9NAAR3">
-<img src="https://imgur.com/P83B8Xc">
-<img src="https://imgur.com/alHt4No">
+<img src="https://i.imgur.com/N9NAAR3.png" alt="screenshot1">
+<img src="https://i.imgur.com/P83B8Xc.png" alt="screenshot2">
+<img src="https://i.imgur.com/alHt4No.png" alt="screenshot3">
 <p>Please log in to utilize the app! You can create an employee and add software that is approved for their use. Software can be added and removed on a separate page that can designated and removed from the employee database.</p>
 <p>Comments can also be added to an employee details page for reminders.</p>
 <h4>Technologies Used:</h4>
