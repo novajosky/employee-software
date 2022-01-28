@@ -10,7 +10,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("https://wallpapercave.com/wp/wp4302953.png");
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 table {
@@ -45,6 +44,10 @@ nav, .login {
   height: 30px;
   color:rgba(255, 255, 255, .5);
   background-color: rgba(255, 255, 255, .5);
+}
+
+#avatar {
+  height: 25px;
 }
 
 input {
@@ -83,7 +86,7 @@ button:hover {
   color: tomato;
 }
 
-button, input, select {
+button, input, select, textarea {
   background-color: rgba(0, 113, 128, 0.2);
 }
 
@@ -97,4 +100,3 @@ p {
   border-radius: .5rem;
   margin: .5rem 0 2rem;
 }
-

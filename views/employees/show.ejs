@@ -46,4 +46,51 @@
 	<button type="submit">Add Approved Software</button>
 </form>
 
+<br><h3>Comments</h3>
+<% if (user) { %>
+  <form id="add-comment-form" method="POST"
+    action="/employees/<%= employee._id %>/comments">
+    <label>Comment:</label>
+    <textarea name="content"></textarea>
+    </select>
+    <input type="submit" value="Add Comment">
+  </form>
+<% } %>
+
+<% if (employee.comments.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Date</th>
+        <th>Comment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let total = 0 %>
+      <% employee.comments.forEach(function(c) { %>
+        <% total += c.rating %>
+        <tr>
+          <td class="comment-user"><img id="avatar" alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
+          <td><%= c.createdAt.toLocaleDateString() %></td>
+          <td><%= c.content %></td>
+          <td>
+            <% if (user && user._id.equals(c.user)) { %>
+              <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            <% } %>
+          </td>
+        </tr>
+      <% }); %>
+      <tr>
+        <td colspan="3"></td>
+      </tr>
+    </tbody>
+  </table>
+<% } else { %>
+  <h5>No Comments</h5>
+<% } %>
+
+
 <%- include('../partials/footer') %>
